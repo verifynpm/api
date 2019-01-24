@@ -112,7 +112,14 @@
     },
     "status": {
       "type": "string",
-      "enum": ["unknown", "pending", "verified", "unverified"]
+      "enum": [
+        "unknown",
+        "pending",
+        "verified",
+        "unverified",
+        "timeout",
+        "error"
+      ]
     }
   }
 }
