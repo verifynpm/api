@@ -75,6 +75,18 @@
           "404": { "$ref": "#/responses/error" },
           "500": { "$ref": "#/responses/error" },
           "503": { "$ref": "#/responses/error" }
+        },
+        "x-amazon-apigateway-integration": {
+          "uri": "arn:aws:apigateway:us-east-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-2:541605000355:function:verifynpm-get-badge/invocations",
+          "responses": {
+            "default": {
+              "statusCode": "200"
+            }
+          },
+          "passthroughBehavior": "when_no_match",
+          "httpMethod": "POST",
+          "contentHandling": "CONVERT_TO_TEXT",
+          "type": "aws_proxy"
         }
       }
     }
