@@ -54,6 +54,29 @@
           "type": "aws_proxy"
         }
       }
+    },
+    "/packages/{packageVersion}/badge.svg": {
+      "get": {
+        "parameters": [
+          {
+            "name": "packageVersion",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "produces": ["image/svg+xml"],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": { "$ref": "#/definitions/packageVersion" }
+          },
+          "400": { "$ref": "#/responses/error" },
+          "404": { "$ref": "#/responses/error" },
+          "500": { "$ref": "#/responses/error" },
+          "503": { "$ref": "#/responses/error" }
+        }
+      }
     }
   },
   "definitions": {
